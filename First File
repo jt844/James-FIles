@@ -1,0 +1,88 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python2",
+      "display_name": "Python 2"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jt844/James-FIles/blob/master/First%20File\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "lDuVCN5HrnFx",
+        "colab_type": "code",
+        "outputId": "bdffc2ee-1953-4bc0-ec22-5b7c1cfb4c4b",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 368
+        }
+      },
+      "source": [
+        "import plotly.graph_objs as go\n",
+        "import pandas as pd\n",
+        "from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot\n",
+        "df = pd.read_csv(r'\\Users\\jt844\\Downloads\\IPMAN.csv')\n",
+        "\n",
+        "trace = go.Scatter(x=df['DATE'], y =df['IPMAN'],\n",
+        "  name = 'Industrial Production')\n",
+        "layout = go.Layout(title='Industrial Production',\n",
+        "                   plot_bgcolor= 'rgb(230,230,230)',\n",
+        "                   showlegend=True)\n",
+        "fig = go.Figure(data=[trace], layout=layout)\n",
+        "\n",
+        "py.iplot(fig, filename='IPMAN')\n",
+        "\n",
+        "\n",
+        "\n",
+        "                    \n"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ImportError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m\u001b[0m",
+            "\u001b[0;31mImportError\u001b[0mTraceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-1-f49b36bf429c>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mplotly\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgraph_objs\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mgo\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mplotly\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0moffline\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mdownload_plotlyjs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0minit_notebook_mode\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mplot\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0miplot\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mplotly\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mpandas\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0mdf\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_csv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mr'\\Users\\jt844\\Downloads\\IPMAN.csv'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mImportError\u001b[0m: cannot import name plotly",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XLeabJ1aI8GL",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
